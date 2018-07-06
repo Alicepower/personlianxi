@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单的点击切换显示不同的内容</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="css/risks.css">
+
+    <script>
+        $(document).ready(function () {
+
+
+            $(".navqie>li").mouseenter(function () {
+
+                $(this).addClass("current");
+
+                $(this).siblings().removeClass("current");
+                var index = $(this).index();
+                var image = $(".contentqie>li").eq(index);
+                image.siblings().removeClass("show");
+
+                image.addClass("show")
+
+            });
+
+
+        });
+
+    </script>
+
+</head>
+<body>
+<div>
+    <div class="box">
+        <div class="informationwarpper w1100" id="tab-bar">
+            <ul class="navqie">
+                <li class="current">
+                    <a href="javascript:;" class="active"><span class="menulist0"></span>运营数据</a>
+                </li>
+                <li><a href="javascript:;" class=""><span class="menulist1"></span>银行存管</a></li>
+
+                <li><a href="javascript:;"><span class="menulist2"></span>多重保障</a></li>
+
+                <li><a href="javascript:;"><span class="menulist3"></span>风险控制</a></li>
+
+                <li><a href="javascript:;"><span class="menulist4"></span>组织信息</a></li>
+
+                <li><a href="javascript:;"><span class="menulist5"></span>审计信息</a></li>
+
+                <li><a href="javascript:;"><span class="menulist6"></span>监管法则</a></li>
+
+                <li><a href="javascript:;"><span class="menulist7"></span>联系我们</a></li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="divcon">
+        <ul class="contentqie">
+            <li class="show">
+
+
+
+
+
+            </li>
+            <li>
+                <div class="xp_bank">
+
+                    <div class="xp_content">
+                        <div class="xp_bank_infor">
+                            <h2>小狗钱钱携手江西银行 让用户资金更安全</h2>
+                            <p>
+                                2017年5月，小狗钱钱携手江西银行实现了”银行直接存管”，可以更好的保障用户账户资金安全，是完全符合监管要求的资金存管模式。银行存管系统上线后，涉及到资金流转都归银行管理。存管的核心保障是完全隔离平台和用户资金，出借人通过银行存管账户投资成功后，资金将直接进入借款人在江西银行的账户，交易真实、清晰可查。银行存管系统成功上线是小狗钱钱完善用户保障体系和积极拥抱监管，合规自律的一次重大升级。</p>
+
+                            <p>银行存管上线后，资金交易环节均在银行系统中进行，资金交易均由用户授权银行操作执行，确保每一笔交易的真实性和法律效力。</p>
+                        </div>
+                    </div>
+
+
+                    <div class="xp_bank_01"></div>
+                    <div class="xp_bank_02">
+                        <a href="#" class="big-link" data-reveal-id="myModal"><img
+                                src="https://m2.xgqq.com/object/3bdb6d3f-1eaa-4b38-988d-204959a44153.png" alt=""></a>
+                    </div>
+
+                    <div class="xp_bank_why">
+                        <div class="xp_bank_i xp_img"></div>
+                        <div class="xp_bank_whys xp_img">
+                            <div class="xp_bank_whyc fl">
+                                <h2>全面符合监管要求</h2>
+                                <p>
+                                    接入银行资金存管是为了更好的保障用户账户资金安全，积极响应银监会下发的各项监管指导意见，是领跑行业合规自律之举。小狗钱钱接入江西银行资金存管系统，“直接存管”模式，完全符合监管要求。</p>
+                            </div>
+                            <div class="xp_bank_whyc fr">
+                                <h2>全力保障资金安全</h2>
+                                <p>存管的核心原理是将平台和用户资金进行隔离，用户的资金不再进入平台控制的账户，借款人和出借人之间的交易发生在双方的银行账户之间，平台无法触碰用户资金。</p>
+                            </div>
+                        </div>
+                        <ul class="guarantee">
+                            <li><i class="imga xp_img"></i>提现实时到账
+                                <div class="red">用户自有江西银行账户提现，实时到账
+                                </div>
+                            </li>
+                            <li><i class="imgb xp_img"></i>监管合规
+                                <div class="orange">主动拥抱监管，平台健康合规运营</div>
+                            </li>
+                            <li><i class="imgc xp_img"></i>资金安全
+                                <div class="green">资金安全隔离，用户授权操作，投资更踏实</div>
+                            </li>
+                            <li><i class="imgd xp_img"></i>法律保障
+                                <div class="blue">用户资金流水可查，具备法律效力，合法证明借贷关系
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="xpffotbg">
+                    <div class="letter w1100"><img src="image/letter.png"></div>
+                </div>
+
+            </li>
+
+            <li>
+
+
+                <div class="content">
+                    <div class="page-guar">
+                        <div class="banner-wrap">
+                            <div class="banner"></div>
+                            <div class="banner2"></div>
+                            <div class="banner3"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </li>
+            <li>
+
+                <div class="xp_content">
+                    <div class="xp_tisk_top">
+                        <ul class="risktop">
+                            <li>
+                                <div class="kk k_red">江西银行资金存管</div>
+                                <div class="t_red"></div>
+                                充值、投资、提现均在江西银行用户自有电子账户完成，确保资金安全。
+                            </li>
+                            <li>
+                                <div class="kk k_green">&nbsp;小额分散一对多的借贷模式</div>
+                                <div class="t_green"></div>
+                                “梦想储蓄罐”采用小额分散模式，投资人出借资金分散投资到多个借款主体，有效分散投资风险。
+                            </li>
+                            <li>
+                                <div class="kk k_blue">项目信息真实透明</div>
+                                <div class="t_blue"></div>
+                                严格选择优质债权主体，多维度审查风控，项目信息合规披露。
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="xp_tisk_mod">
+                        <div class="informationtitle"><b>风控构架</b><span></span></div>
+                        <div class="tc"><img src="image/ea020a73-6572-4cdf-9091-e07c9bff677e.png" alt=""></div>
+                    </div>
+                    <div class="xp_tisk_mod">
+
+                        <div class="informationtitle"><b>风控流程</b><span></span></div>
+
+                        <p style="display: block">借款人通过小狗钱钱资产端提交借款申请后，风控团队按照如下流程进行审查，经过对借款人信息进行综合判断、分析和评价，完成风险评估流程后，最终形成审批结果。</p>
+                        <p>对于存在欺诈风险的申请，进行反欺诈调查。反欺诈调查中确定存在欺诈行为的借款人，根据情况加入对应黑名单。</p>
+
+                    </div>
+
+
+                    <div class="xp_tisk_mod">
+                        <div class="informationtitle"><b>风控预警</b><span></span></div>
+                        <p>
+                            平台对借款项目进行风险预警管理，实现风险预警信息共享，第一时间预报风险、明确责任、防止风险蔓延。同时，对于风险预警进行责任划分，做到各司其责。风险预警信号出现后，责任人保证及时汇报，并深入企业及相关部门了解情况，对风险等级进行判断，并根据不同等级采取相应处理措施。</p>
+                    </div>
+                    <div class="xp_tisk_mod">
+                        <div class="informationtitle"><b>贷后管理</b><span></span></div>
+
+                        <p>贷后管理工作实行业务部和风险部双线管理的方式进行，各自按照不同的工作重点进行独立的贷后管理。</p>
+                        <p>业务部：定期走访客户，保持对客户的维护和管理，定期以《贷后检查表》的形式向风险部书面汇报贷后管理情况。</p>
+                        <p>风险部：负责贷后管理制度建设，动态更新台账数据，客户风险分类，对业务部的《贷后检查表》独立进行抽查，联合财务一同对不良业务的催收和清算工作
+                        </p>
+
+
+                    </div>
+                    <div class="xp_tisk_mod">
+                        <div class="informationtitle"><b>催收方式</b><span></span></div>
+                        <img src="https://m2.xgqq.com/object/9f058db2-887e-4fdc-94ba-47da21b8cb57.png">
+                    </div>
+                    <div class="xpffotbg">
+                        <div class="letter w1100"><img src="image/letter.png"></div>
+                    </div>
+                </div>
+
+
+            </li>
+
+
+
+            <li>
+
+
+
+
+                <div class="xp_tisk_mod">
+                    <div class="informationtitle"><b>工商信息</b><span></span></div>
+                </div>
+
+                <div style="margin-top: 100px;background: white;height: 50px;"></div>
+                <div class="information">
+                    <ul>
+                        <li>平台简称<span>小狗钱钱</span></li>
+                        <li>平台官网<span>www.xgqq.com</span></li>
+                        <li>网站上线运营时间<span>2015.08.21</span></li>
+                        <li>网站域名ICP备案号<span>沪ICP备15010470号-4</span></li>
+                        <li>网安备案图标及编号<span class="imgcc">沪公网安备 31010102002550号</span></li>
+                        <li>增值电信业务经营许可证（ICP）<span>根据监管要求，公司将于平台备案后向相关部门申请</span></li>
+                        <li>公司全称<span>上海隆培资产管理有限公司</span></li>
+                        <li>统一社会信用代码<span>91310000324643045J</span></li>
+                        <li>注册资本(元)<span>100,000,000.00</span></li>
+                        <li>实缴资本(元)<span>35,000,000.00</span></li>
+                        <li>注册地<span>上海市崇明区新河镇新申路921弄2号W区274室（上海富盛经济开发区）</span></li>
+                        <li>经营地<span>上海市黄浦区北京东路668号（科技京城）西楼28层A-B座</span></li>
+                        <li>成立时间<span>2014/12/14</span></li>
+                        <li>经营期限<span>2014/12/14至2044/12/13</span></li>
+                        <li>经营状态<span>开业</span></li>
+                        <li>法定代表人<span>黄军健</span></li>
+                        <li>股东<span>中甬经贸发展（上海）中心       股权占比100%</span></li>
+                        <li>经营范围<span style="width:510px;">资产管理，投资管理，实业投资，投资咨询、商务信息咨询，网络科技、计算机软硬件技术专业领域内的技术开发、技术服务、技术转让，电子商务（不得从事增值电信、金融业务），汽车配件、计算机软硬件的销售，会务会展服务，区内企业间贸易及贸易代理。 【依法须经批准的项目，经相关部门批准后方可开展经营活动】</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="xp_tisk_mod">
+                    <div class="xp_tisk_mod">
+                        <div class="informationtitle"><b>合规备案</b><span></span></div>
+                    </div>
+                    <div style="margin-top: 100px;background: white;height: 100px;"></div>
+                    <div class="org_table">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>备案登记地方金融监管部门</td>
+                                <td>上海市崇明区金融办</td>
+                            </tr>
+                            <tr>
+                                <td>备案登记时间</td>
+                                <td>备案完成后披露</td>
+                            </tr>
+                            <tr>
+                                <td>备案登记编号</td>
+                                <td>备案完成后披露</td>
+                            </tr>
+                            <tr>
+                                <td>增值电信业务经营许可证(ICP)</td>
+                                <td>根据监管要求，公司将于平台备案后向相关部门申请</td>
+                            </tr>
+                            <tr>
+                                <td>资金存管信息</td>
+                                <td>资金存管银行全称：江西银行<br>资金存管签约时间：2017.05.04<br>
+                                    资金存管全量业务上线时间：2017.07.07
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>风险准备金</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>信息系统安全等级保护认证</td>
+                                <td>三级等保备案认证</td>
+                            </tr>
+                            <tr>
+                                <td>公安回执编号</td>
+                                <td>J-18191</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="xp_tisk_mod">
+                    <div class="xp_tisk_mod">
+                        <div class="informationtitle"><b>相关证件</b><span></span></div>
+                    </div>
+
+                </div>
+                <div style="margin-top: 100px;background: white;height: 80px;"></div>
+                <div class="certificate">
+                    <img src="image/6bb25d1a-59af-11e8-8103-00163e1078e5.png" alt="">
+                    <img src="image/6bb38251-59af-11e8-b2ae-00163e0c676d.png" alt="">
+                    <img src="image/6bb25d1a-59af-11e8-8103-00163e1078e5.png" alt="">
+                    <img src="image/6bb38251-59af-11e8-b2ae-00163e0c676d.png" alt="">
+                </div>
+
+
+
+                <div class="xp_tisk_mod">
+                    <div class="xp_tisk_mod">
+                        <div class="informationtitle"><b>股东信息</b><span></span></div>
+                    </div>
+                    <div style="margin-top: 100px;background: white;height: 80px;"></div>
+                    <div class="certificate">
+                        <img src="image/949c44e3-5da0-11e8-8103-00163e1078e5.png" alt="">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+
+                <div class="xp_contentaa">
+
+                    <ul class="gaogao" >
+                        <li style="border: 3px solid #0091e7">    <a href=""><img src="image/finbaogao.png" alt=""></a></li>
+                        <li style="border: 3px solid #a0a0a0;">   <a href=""><img src="image/baogao.png" alt=""></a></li>
+                        <li style="border: 3px solid #a0a0a0;">  <a href=""><img src="image/baogao.png" alt=""></a></li>
+                    </ul>
+
+                </div>
+            </li>
+            <li>
+
+                <div class="content">
+                    <div class="xp_risk">
+                        <div class="xp_content">
+                            <div class="xp_supervise">
+                                <p><a href="#" target="_blank">网络借贷信息中介机构备案登记指引</a></p>
+                                <p><a href="#" target="_blank">网络借贷资金存管业务指引</a></p>
+                                <p><a href="#" target="_blank">网络借贷信息中介机构业务活动信息披露指引</a></p>
+                                <p><a href="#" target="_blank">关于促进互联网金融健康发展的指导意见</a></p>
+                                <p><a href="#" target="_blank">上海市网络借贷信息中介机构合规审核与整改验收工作指引表</a></p>
+                                <p><a href="#">上海网络借贷电子合同存证业务指引</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+      <li>
+
+
+          <div class="content">
+              <div class="xp_risk">
+                  <div class="xp_content">
+                      <div class="xp_contactus">
+                          <img src="https://m2.xgqq.com/object/5ce231a9-b63b-4773-b8e2-bc236d29f15f.png" alt="">
+                      </div>
+
+                      <div class="servicesbox top_50">
+                          <ul class="services xps_img">
+                              <li><h3>人工服务</h3></li>
+                              <li>咨询电话: 400-166-2616</li>
+                              <li>投诉电话: 400-166-2616</li>
+                          </ul>
+                          <ul class="time xps_img">
+                              <li>工作时间: <span>全天（节假日另行通知）09:00—晚18:00</span></li>
+                          </ul>
+                          <ul class="customer xps_img">
+                              <li><h3>客服QQ</h3></li>
+                              <li>客服-卫卫：287510359</li>
+                              <li>客服-屋屋：1321996176</li>
+                              <li>官方交流群：370723739</li>
+                          </ul>
+                      </div>
+
+
+
+                      <div class="xp_contactus">
+                          <img src="https://m2.xgqq.com/object/6c3b1492-0936-451d-ae7d-9573d1d7652e.png" alt="">
+                      </div>
+                      <div class="address top_50">
+                          <h3>公司地址：上海市黄浦区北京东路668号（科技京城）西楼28层A-B座</h3>
+                          <div class="ct">
+                              <img src="https://m2.xgqq.com/object/aeda2070-1b89-4edc-b4f4-efcee9179bae.png" alt="">
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </li>
+
+
+        </ul>
+    </div>
+
+
+</div>
+</body>
+</html>

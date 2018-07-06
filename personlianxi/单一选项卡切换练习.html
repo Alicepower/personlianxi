@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="登录 注册界面 ">
+    <meta name="description" content="琉璃子 选项卡练习">
+    <title>juqery01-选项卡练习</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 100%;
+            height: 100px;
+            margin: 50px auto;
+            margin-left: 300px;
+        }
+
+        .navqie > li {
+            width: 140px;
+            height: 50px;
+            list-style: none;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+            font-size: 14px;
+        }
+
+        .navqie > .current {
+        / / background: #ccc;
+            border-bottom: 3px solid #1e93ff;
+        }
+
+        .navqie > .current:hover {
+            border-bottom: 3px solid #1e93ff;
+        }
+
+        .contentqie > li {
+            list-style: none;
+        }
+
+        .contentqie > li {
+            display: none;
+        }
+
+        .contentqie > .show {
+            display: block;
+        }
+
+        .divcon {
+            margin-top: 50px;
+        }
+
+        .navqie > li > a {
+            text-decoration: none;
+            color: #0e2642;
+        }
+
+        .navqie > li > a:hover {
+
+            color: #1e93ff;
+
+        }
+
+        .fix {
+            height: 52px;
+            width: 356px;
+            padding-top: 9px;
+        }
+
+        .fix a {
+            float: left;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+
+            $(".navqie>li").mouseenter(function () {
+
+                $(this).addClass("current");
+
+                $(this).siblings().removeClass("current");
+                var index = $(this).index();
+                var image = $(".contentqie>li").eq(index);
+                image.siblings().removeClass("show");
+
+                image.addClass("show")
+
+            });
+
+
+        });
+
+    </script>
+
+</head>
+<body>
+<div>
+    <div class="box">
+        <ul class="navqie">
+            <li>
+                <h1 class="fix">
+                    <a href=""><img src="image/logo%20(1).png" alt="" style="display: inline-block"></a>
+                    <a href=""><img src="image/slogon.gif" alt="" style="display: inline-block"></a>
+                </h1>
+
+
+            </li>
+            <li class="current" style="margin-left: 200px"><a href="">首页</a></li>
+            <li><a href="">我要出借</a></li>
+            <li><a href="">梦想储蓄罐</a></li>
+            <li><a href="">积分商城</a></li>
+            <li><a href="">排榜大厅</a></li>
+            <li><a href="">信息披露</a></li>
+            <li><a href="">新手入门</a></li>
+            <li><a href="">关于我们</a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="divcon">
+        <ul class="contentqie">
+            <li class="show">
+
+                首页
+
+            </li>
+            <li><a href="">我要出借</a></li>
+            <li><a href="">梦想储蓄罐</a></li>
+            <li><a href="">积分商城</a></li>
+            <li><a href="">排榜大厅</a></li>
+            <li><a href="">信息披露</a></li>
+            <li><a href="">新手入门</a></li>
+            <li><a href="">关于我们</a></li>
+        </ul>
+    </div>
+
+
+</div>
+</body>
+</html>

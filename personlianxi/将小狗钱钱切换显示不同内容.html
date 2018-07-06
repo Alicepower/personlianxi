@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>将小狗钱钱切换显示不同内容</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 100%;
+            height: 100px;
+            margin: 50px auto;
+            margin-left: 350px;
+        }
+
+        .navqie > li {
+            width: 140px;
+            height: 50px;
+            list-style: none;
+            background: orange;
+            text-align: center;
+            line-height: 50px;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        .navqie > .current {
+            background: #ccc;
+            border-bottom: 3px solid #1e93ff;
+        }
+
+        .navqie > .current:hover {
+            border-bottom: 1px solid #1e93ff;
+        }
+
+        .contentqie > li {
+            list-style: none;
+        }
+
+        .contentqie > li {
+            display: none;
+        }
+
+        .contentqie > .show {
+            display: block;
+        }
+
+        .divcon {
+            margin-top: 50px;
+        }
+
+        .navqie > li > a {
+            text-decoration: none;
+            color: #0e2642;
+        }
+
+        .navqie > li > a:hover {
+
+            color: #1e93ff;
+
+        }
+
+        .advise > li {
+            list-style: none;
+            margin-top: 20px;
+            border-bottom: 1px dashed #d9d9d9;
+            margin-right: 400px;
+            height: 52px;
+            line-height: 52px;
+            border-bottom: 1px dashed #d9d9d9;
+
+        }
+
+        .aser01 {
+            background: #ff4c5d;
+            color: #fff;
+            border-radius: 5px;
+            border: 1px solid #ff4c5d;
+            text-decoration: none;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px
+        }
+
+        .aser {
+            padding: 0 13px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 6px;
+            background: #fff;
+            border: 1px solid #c4c4c4;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .aser:hover {
+            color: #1B9AF7;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+
+            $(".navqie>li").mouseenter(function () {
+
+                $(this).addClass("current");
+
+                $(this).siblings().removeClass("current");
+                var index = $(this).index();
+                var image = $(".contentqie>li").eq(index);
+                image.siblings().removeClass("show");
+
+                image.addClass("show")
+
+            });
+
+
+        });
+
+    </script>
+
+</head>
+<body>
+<div>
+    <div class="box">
+        <ul class="navqie">
+            <li class="current"><a href="">平台简介</a></li>
+            <li><a href="">关于钱钱</a></li>
+            <li><a href="">股东介绍</a></li>
+            <li><a href="">合作伙伴</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">高管介绍</a></li>
+            <li><a href="">媒体报道</a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="divcon">
+        <ul class="contentqie">
+            <li class="show">
+
+                <div style="height: 900px;margin-left: 200px;margin-top: -150px">
+
+<!--                    <div style="height: 40px;
+    border-bottom: 1px solid #1e93ff;margin-left: 350px;margin-right: 300px;
+"></div>
+           -->         <div style="background: white;margin-left:350px;margin-right: 300px">
+
+                        <div style="line-height: 35px;text-align: left">
+                            <p>
+                            <p class="MsoNormal">
+                                <span style="font-size:14px;">　　小狗钱钱主体为上海隆培资产管理有限公司，是一家国有绝对控股企业（100%国有资产），股东为中甬经贸发展（上海）中心，是全民所有制企业。上海隆培资产管理有限公司于2014年在上海自由贸易实验区成立，公司注册资金1亿元人民币，是一家互联网借贷信息中介平台。&nbsp;</span>
+                            </p>
+                            <p>
+	<span style="font-size:14px;"> 　　作为全国首家全民所有制企业注资、国企绝对控股的互联网金融平台，小狗钱钱将秉承国有企业的社会责任，严守资金安全底线，成为沪上国有控股互联网金融平台的领航者。<br/>
+</span><span style="font-size:14px;"> 　　小狗钱钱专注于票据项目，通过优选票据资产，向大众投资者提供稳健、便利的投资借贷交易撮合服务。公司的票据来源于银行、央企、国企、上市公司以及实力强大的大型企业。平台通过专业服务及模式创新，为中小企业及个人客户提供可信赖的投融资中介服务，实现财富稳定增值。&nbsp;<br/>
+　　在风险控制方面，公司不仅拥有结合全球金融发展与互联网技术创新的风险管控体系，更与江西银行达成了资金存管的合作，实现了用户资金与平台运营资金的全面隔离，彻底杜绝资金池；与专业会计师事务所签署战略合作协议，获取有关财务报表金额和披露的审计证据、内部控制、管理咨询等方面提供专业服务，保证运营信息真实透明。</span><span
+                                    style="font-size:14px;"><br/>
+</span><span style="font-size:14px;"> 　　</span><strong><span style="font-size:14px;">发展历程</span></strong><span
+                                    style="font-size:14px;">&nbsp;<br/>
+</span><span style="font-size:14px;"> 　　上海隆培资产管理有限公司，于2014年在上海自由贸易实验区成立，主要为中小企业提供融资解决方案，为融资企业匹配相应的资金出借人。&nbsp;<br/>
+</span><span style="font-size:14px;"> 　　2016年1月29日，平台引入总额8000万元A轮融资，投资方为全民所有制企业中甬经贸发展（上海）中心。由此，小狗钱钱成为沪上国有控股的专业票据资产借贷交易撮合平台（国有资产占比100%），也是全国首家全民所有制企业注资、国企绝对控股的互联网金融平台。<br/>
+</span><span style="font-size:14px;"> 　　2014年12月14日，上海隆培资产管理有限公司成立，注册资金1亿元。<br/>
+</span><span style="font-size:14px;"> 　　2015年8月21日，小狗钱钱1.0版本PC端网站正式上线。<br/>
+</span><span style="font-size:14px;"> 　　2015年10月，小狗钱钱与天津银行签署战略合作协议。<br/>
+</span><span style="font-size:14px;"> 　　2015年11月，小狗钱钱与中审亚太会计事务所签署战略合作协议，保证运营信息真实透明。<br/>
+</span><span style="font-size:14px;"> 　　2015年11月16日，小狗钱钱在沪上最佳财富管理平台评选中荣获“最佳财富管理品牌”称号。<br/>
+</span><span style="font-size:14px;"> 　　2015年12月29日，小狗钱钱与天安财产保险股份有限公司签订理财账户交易资金安全责任险，为投资人账户系上“双保险”。<br/>
+</span><span style="font-size:14px;"> 　　2015年12月底，小狗钱钱2.0版PC端完成升级，同时推出移动端APP、微信服务号。<br/>
+</span><span style="font-size:14px;"> 　　2016年1月底，小狗钱钱引入中甬经贸发展（上海）中心8000万战略投资，成为国有绝对控股的票据理财平台。<br/>
+</span><span style="font-size:14px;"> 　　2016年3月15日，小狗钱钱交易额破亿，无坏账记录。<br/>
+</span><span style="font-size:14px;"> 　　2016年3月22日，小狗钱钱受邀出席亚太地区网络替代金融基准报告发布仪式。<br/>
+</span><span style="font-size:14px;"> 　　2016年6月6日，小狗钱钱与韩中交流协会中国总会达成战略合作。<br/>
+</span><span style="font-size:14px;"> 　　2016年7月28日，小狗钱钱与恒丰银行就资金存管系统完成对接并正式上线。<br/>
+</span><span style="font-size:14px;"> 　　2016年8月9日，国资平台小狗钱钱当选国金联盟理事单位。<br/>
+</span><span style="font-size:14px;"> 　　2016年9月13日，小狗钱钱由中甬经贸发展（上海）中心全资控股，晋升为首家国有全资子公司。<br/>
+</span><span style="font-size:14px;"> 　　2017年4月12日，上海市工商联筹建金融创新服务业商会，小狗钱钱为发起单位之一。<br/>
+</span><span style="font-size:14px;"> 　　2017年4月21日，小狗钱钱登陆互金移动影响力百强榜。<br/>
+</span><span style="font-size:14px;"> 　　2017年 5月4日，小狗钱钱与江西银行正式签署资金存管协议。<br/>
+</span><span style="font-size:14px;"> 　　2017年7月7日，小狗钱钱与江西银行资金存管正式上线。<br/>
+</span><span style="font-size:14px;"> 　　2017年7月16日，小狗钱钱交易额破10亿。<br/>
+</span><span style="font-size:14px;"> 　　2017年8月21日，小狗钱钱诞生2周年。<br/>
+</span><span style="font-size:14px;"> 　　2017年11月23日，小狗钱钱通过互联网信用评级，荣获AAA级。<br/>
+</span><span style="font-size:14px;"> 　　2017年11月28日，小狗钱钱受邀参加第六届全国财富管理论坛，小狗钱钱通过中国信息协会的资格审核，正式成为首届中国信息协会会员。<br/>
+</span><span style="font-size:14px;"> 　　2018年1月16日，由品途集团主办的“品途2017年度NBI影响力评选颁奖盛典”在北京举行。小狗钱钱荣获2017年度商业影响力金融科技领域新锐企业top5。<br/>
+</span><span style="font-size:14px;"> 　　2018年1月29日，第七届中国公益节在北京盛大开启。作为中国公益慈善领域最具影响力的年度盛典，小狗钱钱凭借履行社会公益之责，凝聚社会正能量的企业形象斩获两项大奖——小狗钱钱荣获2017年度普惠金融典范奖，小狗钱钱CEO甘俊杰获评2017年度公益人物奖。<br/>
+</span><span style="font-size:14px;"> 　　</span><strong><span style="font-size:14px;">平台优势</span><br/>
+                            </strong><span style="font-size:14px;"> 　　一、国有绝对控股企业：由全民所有制企业注资，100%国有控股。<br/>
+</span><span style="font-size:14px;"> 　　二、超强风控：资深风控团队，层层把控风险级别。<br/>
+</span><span style="font-size:14px;"> 　　三、银行存管：江西银行资金存管，保证用户账户独立，资金和平台隔离，交易安全。　　四、无手续费：平台无充值、提现费（针对已投资用户）以及其他服务费用。</span>
+                            </p>
+                            <p>
+                                <br/>
+                            </p>
+                            <p>
+                                <br/>
+                            </p>
+                            <p>
+	<span style="font-size:14px;font-family:'Microsoft YaHei';display: none"><img src="image/shaxi.png" alt=""/><br/>
+</span>
+                            </p></p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </li>
+            <li>
+
+                <div style="margin-left: 550px;line-height: 30px;margin-top: -150px">
+                    <p>
+                    <p>
+                        <span style="font-size:14px;">2015年8月，热辣的夏天，国有100%绝对控股的互联网金融平台“小狗钱钱”上线了，小狗钱钱专注于互动金融平台，目标是希望每个人都能走在财务自由的道路上。</span>
+                    </p>
+                    <p>
+                        <strong><span style="font-size:14px;">有钱人都是这样赚钱，你为什么不呢？</span></strong>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">有钱人把多年积累的财富，投资到各个领域，让钱为自己工作，他们迎娶白富美，走上人生巅峰。而你，还在精打细算，把钱存银行么？那些美好的梦想，何时才能实现？</span>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">像有钱人那样思考，像有钱人那样赚钱。定下这个目标，然后进行明智的投资。钱钱相信，所有的成功都是留给有准备并付出行动的人。</span>
+                    </p>
+                    <p>
+                        <strong><span style="font-size:14px;">遇见不一样的小狗钱钱</span></strong>
+                    </p>
+                    <p>
+	<span style="font-size:14px;">小
+狗钱钱网的名字源于美国作家博多.舍费尔的《小狗钱钱》，它讲述了一个普通的12岁女孩吉娅，在偶然的机会下救助了一只受伤的小狗，并给它取名叫“钱
+钱”。没想到，钱钱居然是一位深藏不露的理财高手，由此，一只会讲人类语言的拉布拉多犬，彻底改变了吉娅一家人的财富命运。</span>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">金钱有一些秘密和规律,&nbsp;要想了解这些秘密和规律,&nbsp;前提条件是,你自己必须真的有这个愿望。</span>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">钱钱最大的愿望就是帮助每一位投资人进行合理的投资理财，找到积累资产的方法，早日实现每一个梦想。</span>
+                    </p>
+                    <p>
+                        <strong><span style="font-size:14px;">总有值得去做的事情：人人都是理财师</span></strong>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">余额宝引爆了互联网金融最流行的理财方式，高收益、高流动性，活期投资让不确定性消费有了完美的解决方法，而定期投资，让理财方式更简单，收益率更高。</span>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">小狗钱钱基于这样最基本的理财需求，推出年化利率6%-10%的理财产品，为每位投资人提供一个多向性资金投资方案，小狗钱钱正式成为金钱的搬运工，自己想想都有点小激动呢。</span>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">最好的理财师都是投资人，小狗钱钱为了帮助投资人更好的成为理财高手，邀请大神级别的投资人入驻，分享投资经验，为投资新鲜人提供专业的理财指导，让每一分钱都无法偷懒，为你工作起来。&nbsp;</span>
+                    </p>
+                    <p>
+                        <strong><span style="font-size:14px;">钱钱的背景和团队</span></strong>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">国企中甬经贸发展<span
+                                style="font-size:13.63636302947998px;line-height:19.09090805053711px;">（上海）</span>中心8000万注资小狗钱钱，倾力打造互联网金融加文化产业的线上平台“小狗钱钱”，10年的积累，10&nbsp;年后飞跃，只为让服务更专业。</span>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">小狗钱钱汇集了众多金融人才，其中包括银行、基金、信托、证券等多个领域的专业人才。</span>
+                    </p>
+                    <p>
+                        <span style="font-size:14px;">小狗钱钱的一众小伙伴们爱钱、爱生活、为所有人的梦想，努力奔跑着。</span>
+                    </p></p>
+                </div>
+
+
+            </li>
+            <li>
+
+                <div>
+
+
+                    <div style="margin-left: 550px;line-height: 30px;margin-top: -120px">
+                        <p><img src="image/images001.png" alt="" style="margin-left: 350px">
+                        <p style="text-align:center;">
+                            <span style="font-family:'Microsoft YaHei';font-size:14px;"><span
+                                    style="font-size:16px;"><img src="/images?uuid=41c3a2e7-ad80-48cb-a488-d2bc8001b511"
+                                                                 alt=""/>&nbsp; &nbsp;</span></span>
+                        </p>
+                        <p style="text-align:center;">
+                            <span style="font-family:'Microsoft YaHei';font-size:14px;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;</span></span>
+                        </p>
+                        <p style="text-align:center;">
+                            <span style="font-family:'Microsoft YaHei';font-size:14px;"><span
+                                    style="font-size:16px;">中甬</span></span><span
+                                style="font-family:'Microsoft YaHei';font-size:16px;">经贸发展（上海）中心，为全民所有制企业</span>
+                        </p>
+                        <p style="text-align:left;">
+                            <span style="font-family:'Microsoft YaHei';font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp;</span><span
+                                style="font-family:'Microsoft YaHei';font-size:16px;">为了促进企业转型升级，加快国有企业发展步伐及资源储备，利用国企优质资源平台参与市场竞争，保持国有企业的发展壮大，中甬经贸打造集实业投资、国际贸易、资产管理、金融服务、农林旅游、科技环保运营于一体的全产业链模式；构筑以金融平台、贸易平台、产业平台为主的支撑体系，较好地发挥了国有企业在各业务领域的影响力、控制力、和带动力。</span>
+                        </p>
+                        <span style="font-family:'Microsoft YaHei';">
+<p style="text-align:left;">
+	<span style="font-size:16px;line-height:1.5;">&nbsp; &nbsp; &nbsp; &nbsp;为了提高企业核心竞争力，为适应深化国有企业事业单位体制的改革、建立现代企业制度的要求，促进国有企业和民营企业的共同混合发展，中甬经贸将按照不同业务板块进行专业化经营和管理，保证各项业务的持续健康发展。公司以为客户需求为中心，以新商业模式为突破，以技术创新为支持，不断寻求新的蜕变，积极提供多样化增值服务，极力展开市场合作，努力发展成为提供优质服务的大型国有企业集团。</span>
+</p>
+</span><span style="font-family:'Microsoft YaHei';">
+<p style="text-align:left;">
+	<span style="font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:16px;">2016年是中国“十三五”规划开局之年，也是中国与沿线国家全力推进“一带一路”建设的年份。中甬经贸将深入国家“一带一路”和长江经济带战略的项目蓝海，精心组织“千企行丝路”活动，全面拓展与沿线地区间的经贸、文化、旅游、技术、投资、考察交流等合作活动，促进贸易和生产要素的优化配置以及地区间的经贸融合、招商引资、文化交流。更好的服务政府、社会与企业，为中国企业“走出去”、区域经济大发展以及“一带一路”沿线国家和地区合作交流搭建互联互通、共荣共赢的平台。</span>
+</p>
+</span><span style="font-family:'Microsoft YaHei';">
+<p style="text-align:left;">
+	<span style="font-size:16px;line-height:1.5;">&nbsp; &nbsp; &nbsp; &nbsp;中甬经贸发展（上海）中心拥有一批智慧、勤奋、努力、富有创造力且充满朝气的员工，这支优秀的团队被众多的合作伙伴所称赞信赖。未来，公司带领员工开创奋进，开创十三五发展新篇章。</span>
+</p>
+</span>
+                        <p style="text-align:center;">
+                            <br/>
+                        </p>
+                        <div style="text-align:center;">
+                            <br/>
+                        </div>
+                        <p style="text-align:center;">
+                            <br/>
+                        </p></p>
+                    </div>
+                </div>
+
+
+            </li>
+            <li><img src="image/images005.png" alt="" style="margin-left: 550px;margin-top: -200px"></li>
+            <li>
+
+                <div style="margin-left: 550px;line-height:40px;margin-top: -150px">
+                    <p>
+                    <p>
+                        <span style="font-size:14px;">全国服务热线：<span
+                                style="font-family:'';font-size:14px;line-height:21px;">400-166-2616 或 021-63280006</span></span><br/>
+                        <span style="font-size:14px;">人工服务时间：9:00-18:00 （如有任何建议和意见，请在线联系客服或拨打全国客服热线）</span><br/>
+                        <span style="font-size:14px;">办公地址：上海市黄浦区北京东路668号（科技京城）西楼28层A-B座</span><br/>
+                        <span style="font-size:14px;">官方Q群：370723739&nbsp;</span><br/>
+                        <span style="font-size:14px;">微信公众号：小狗钱钱（qianqiandogcom）　　　微信服务号：小狗钱钱粉丝会（xgqqfans）</span>
+                    </p>
+                    <p style="font-size:18px;color:#4D4D4D;font-family:微软雅黑, helvetica, arial, sans-serif;background-color:#FFFFFF;">
+	<span style="font-size:14px;">
+        <img src="image/foot.png" width="300" height="300" alt=""/>　
+        <img src="image/foot.png" width="300" height="300" alt=""/><br/>
+</span>
+                    </p></p>
+                </div>
+
+
+            </li>
+            <li><img src="image/images008.png" alt="" style="margin-left: 550px;margin-top: -200px"></li>
+            <li>
+
+                <div style="margin-left: 550px;margin-top: -120px">
+                    <h5 style="    font-size: 18px;font-weight: bold;color: #1e93ff;">媒体报道</h5>
+                    <ul class="advise">
+                        <li><img src="image/news-li-bg.png" alt=""> <span
+                                style="margin-left: 20px">小狗钱钱给你支招如何选择优质P2P平台</span>
+                            <span style="float: right;">2018-5-16</span></li>
+                        <li><img src="image/news-li-bg.png" alt=""> <span style="margin-left: 20px">小狗钱钱通过公安部等保三级认证，合规备案优势更显</span>
+                            <span style="float: right;">2018-5-16</span></li>
+                        <li><img src="image/news-li-bg.png" alt=""> <span
+                                style="margin-left: 20px">监管备案之际，小狗钱钱信息披露迎合规</span>
+                            <span style="float: right;">2018-5-16</span></li>
+                        <li><img src="image/news-li-bg.png" alt=""> <span style="margin-left: 20px">互联网资管新规出台，小狗钱钱合规备案占优势</span>
+                            <span style="float: right;">2018-5-16</span></li>
+                        <li><img src="image/news-li-bg.png" alt=""> <span
+                                style="margin-left: 20px">网贷平台纷纷“去杠杆”，小狗钱钱表示支持</span>
+                            <span style="float: right;">2018-5-16</span></li>
+                        <li><img src="image/news-li-bg.png" alt=""> <span style="margin-left: 20px">315消费者权益日，小狗钱钱坚守用户至上原则</span>
+                            <span style="float: right;">2018-5-16</span></li>
+
+                    </ul>
+
+
+                    <div style="margin-left:450px;margin-top: 30px ">
+
+
+                        <a href="" class="aser01">1</a>
+                        <a href="" class="aser">2</a>
+                        <a href="" class="aser">3</a>
+                        <a href="" class="aser">4</a>
+                        <a href="" class="aser">5</a>
+                        <a href="" class="aser">6</a>
+                        <a href="" class="aser">7</a>
+                        <a href="" class="aser">8</a>
+                        <a href="" class="aser">9</a>
+                        <a href="" class="aser">10</a>
+                        <a href="" class="aser">下一页</a>
+                        <a href="" class="aser">末页</a>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+</body>
+</html>

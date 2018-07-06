@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模仿百度左边切换右边显示不同内容</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="css/baidu.css">
+    <script>
+        $(document).ready(function () {
+
+
+            $(".navqie>li").mouseenter(function () {
+
+                $(this).addClass("current");
+
+                $(this).siblings().removeClass("current");
+                var index = $(this).index();
+                var image = $(".contentqie>li").eq(index);
+                image.siblings().removeClass("show");
+
+                image.addClass("show")
+
+            });
+
+
+        });
+
+    </script>
+
+</head>
+<body>
+<div>
+    <div class="box">
+        <ul class="navqie">
+            <li class="current"><a href="">百度统计-网站统计</a></li>
+            <li><a href="">百度统计-移动统计</a></li>
+            <li><a href="">百度统计-高级分析</a></li>
+            <li><a href="">配套服务</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="divcon">
+        <ul class="contentqie">
+            <li class="show">
+
+                <div style="margin-left: 550px;margin-top: -150px">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">产品概述</h3>
+                    <p style="margin-top: 20px;color: #555966;line-height: 30px;font-size: 12px;width: 900px;">
+                        全球最大的中文网站流量分析平台，帮助企业收集网站访问数据，提供流量趋势、来源分析、转化跟踪、页面热力图、访问流等多种统计分析服务，同时与百度搜索、百度推广、云服务无缝结合，为网站的精细化运营决策提供数据支持，进而有效提高企业的投资回报率。</p>
+                </div>
+
+
+                <div style="margin-left: 550px;">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;margin-top: 50px">产品优势</h3>
+
+                    <div class="circle">
+
+                        <div style="position: absolute;text-align: center;margin-top: 80px;margin-left: 20px">
+
+                            <h4 style="font-size: 24px;margin-bottom: 16px;">专业</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">数据丰富、功能完善</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">与百度推广等数据无缝结合</p>
+                        </div>
+
+                        <div style="position: absolute;text-align: center;top: 66px;left: 290px;">
+
+                            <h4 style="font-size: 24px;margin-bottom: 16px;">稳定</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">大规模服务集群</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">分布式海量存储</p>
+                        </div>
+
+
+                        <div style="position: absolute;text-align: center;top: 118px; right: 323px;">
+
+                            <h4 style="font-size: 24px;margin-bottom: 16px;">快速</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">实时统计</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">秒级响应</p>
+                        </div>
+                        <div style="position: absolute;text-align: center;    top: 73px;right: 93px;">
+
+                            <h4 style="font-size: 24px;margin-bottom: 16px;">易用</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">部署简单</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">操作便捷</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">设置灵活</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div style="margin-left: 550px;margin-top: 320px">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">报告类型</h3>
+
+                    <ul class="webdesc">
+                        <li>
+                            <h4 style="margin-bottom: 15px;margin-top: 20px;font-size: 14px">网站概况</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 12px">
+                                提供网站运营的概括性表现，TOP关键词、TOP来源、TOP入口页面等。</p>
+
+                        </li>
+                        <li>
+                            <h4 style="margin-bottom: 15px;margin-top: 20px;font-size: 14px">百度推广</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 12px">
+                                提供搜索推广、网盟推广等百度推广产品从点击、访问到转化的效果数据。</p>
+
+                        </li>
+                        <li>
+                            <h4 style="margin-bottom: 15px;margin-top: 20px;font-size: 14px">流量分析</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 12px">
+                                提供各时间维度的网民访问情况，以及细到IP、页面浏览顺序的实时访问明细。</p>
+
+                        </li>
+                        <li>
+                            <h4 style="margin-bottom: 15px;margin-top: 20px;font-size: 14px">来源分析</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 12px">
+                                提供网站流量的来源分布，能自动区分百度各推广产品来源，并支持您自定义来源。</p>
+
+                        </li>
+
+
+                        <li>
+                            <h4 style="margin-bottom: 15px;margin-top: 20px;font-size: 14px">访问分析</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 12px">
+                                提供网站页面的访问情况，入口页、子目录、点击图、上下游等。</p>
+
+                        </li>
+                        <li>
+                            <h4 style="margin-bottom: 15px;margin-top: 20px;font-size: 14px">转化分析</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 12px">提供网站转化概况数据、转化路径漏斗分析、订单类分析。</p>
+
+                        </li>
+
+
+                        <li>
+                            <h4 style="margin-bottom: 15px;margin-top: 20px;font-size: 14px">访客分析</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 12px">
+                                提供多维度的访客属性，地域分布、新老访客、忠诚度分析、性别年龄、学历职业等，让网站运营更精准。</p>
+
+                        </li>
+
+                        <li>
+                            <h4 style="margin-bottom: 15px;margin-top: 20px;font-size: 14px">优化分析</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 12px">
+                                提供搜索词、索引量、速度诊断等SEO相关的优化建议，帮助您全面优化网站。</p>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+                <div style="margin-left: 550px;margin-top: 50px">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">特色功能</h3>
+
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">1</em><span style="margin-left: 10px">SEO优化必备</span></h4>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">独家搜索词披露</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            独家获取百度搜索词，帮助您及时了解访客搜索意图，进而针对性地优化网站内容。</p>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">搜索引擎抓取</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            与搜索引擎抓取爬虫强合作，统计代码将网站页面实时推送至百度收录库，加速网站被检索到的速度，更早触达访客，争取宝贵的先发优势。</p>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">SEO分析</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            网站速度诊断、索引量查询、抓取异常检测、网站安全诊断、Robots等，更多功能敬请期待。</p>
+                    </div>
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">2</em><span style="margin-left: 10px">SEO优化必备</span></h4>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">独家搜索词披露</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            独家获取百度搜索词，帮助您及时了解访客搜索意图，进而针对性地优化网站内容。</p>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">搜索引擎抓取</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            与搜索引擎抓取爬虫强合作，统计代码将网站页面实时推送至百度收录库，加速网站被检索到的速度，更早触达访客，争取宝贵的先发优势。</p>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">SEO分析</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            网站速度诊断、索引量查询、抓取异常检测、网站安全诊断、Robots等，更多功能敬请期待。</p>
+                    </div>
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">3</em><span style="margin-left: 10px">SEO优化必备</span></h4>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">独家搜索词披露</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            独家获取百度搜索词，帮助您及时了解访客搜索意图，进而针对性地优化网站内容。</p>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">搜索引擎抓取</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            与搜索引擎抓取爬虫强合作，统计代码将网站页面实时推送至百度收录库，加速网站被检索到的速度，更早触达访客，争取宝贵的先发优势。</p>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">SEO分析</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            网站速度诊断、索引量查询、抓取异常检测、网站安全诊断、Robots等，更多功能敬请期待。</p>
+                    </div>
+
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">4</em><span style="margin-left: 10px">SEO优化必备</span></h4>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">独家搜索词披露</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            独家获取百度搜索词，帮助您及时了解访客搜索意图，进而针对性地优化网站内容。</p>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">搜索引擎抓取</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            与搜索引擎抓取爬虫强合作，统计代码将网站页面实时推送至百度收录库，加速网站被检索到的速度，更早触达访客，争取宝贵的先发优势。</p>
+                        <h5 style="margin-top: 16px; margin-bottom: 7px; padding-left: 30px">SEO分析</h5>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            网站速度诊断、索引量查询、抓取异常检测、网站安全诊断、Robots等，更多功能敬请期待。</p>
+                    </div>
+
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">5</em><span style="margin-left: 10px">自定义报告</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            个性化定制维度需求，满足数据精细化日常监控；快速定位系统短板，实现数据驱动</p>
+
+                    </div>
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">6</em><span style="margin-left: 10px">热力图</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            全球首款免费智能热力图，通过点击热图发掘用户与网站的交互行为,帮助改善网站体验、降低用户流失、提升转化率。</p>
+
+                    </div>
+
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">7</em><span style="margin-left: 10px">自定义报告</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            个性化定制维度需求，满足数据精细化日常监控；快速定位系统短板，实现数据驱动</p>
+
+                    </div>
+
+
+                </div>
+
+                <div style="height: 300px;background: #e5e5e5"></div>
+
+
+            </li>
+            <li>
+
+                <!--移动统计-->
+                <div style="margin-left: 550px;margin-top: -150px">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">产品概述</h3>
+                    <p style="margin-top: 10px;color: #555966;line-height: 20px;font-size: 12px;width: 900px;">
+                        百度移动统计是移动智能时代移动端全形态的专业、免费数据统计与分析平台。广大移动产品的从业人员，可以通过移动统计解决以下问题：</p>
+
+
+                    <div style="margin-top: 20px;display: inline-block">
+
+                        <h4 style="font-size: 12px;margin-left: 5px"><span
+                                style="font-size: 14px;color: #b0b8bf;font-weight: 400;">1.</span> 监控核心业务数据</h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 10px;width: 200px;">
+                            通过平台预定义的报表，实现对产品日常运营核心业务数据的精准监控，满足企业管理、运营和数据分析人员的日常数据统计需求。</p>
+                    </div>
+
+
+                    <div style="margin-top: 20px;display: inline-block">
+
+                        <h4 style="font-size: 12px;margin-left: 5px"><span
+                                style="font-size: 14px;color: #b0b8bf;font-weight: 400;">2.</span> 监测崩溃辅助研发</h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 10px;width: 200px;">
+                            通过crash报表监测产品稳定性，帮助研发人员快速定位bug，提升修复研发效率。</p>
+                    </div>
+
+                    <div style="margin-top: 20px;display: inline-block">
+
+                        <h4 style="font-size: 12px;margin-left: 5px"><span
+                                style="font-size: 14px;color: #b0b8bf;font-weight: 400;">3.</span> 洞悉用户营销增长</h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 10px;width: 200px;">
+                            结合用户管理与百度人群画像数据，帮助客户更好地分析洞察用户，是营销人员制定营销策略实现用户增长的重要依据。</p>
+                    </div>
+
+                    <div style="margin-top: 20px;display: inline-block">
+
+                        <h4 style="font-size: 12px;margin-left: 5px"><span
+                                style="font-size: 14px;color: #b0b8bf;font-weight: 400;">4.</span> 服务产品迭代优化</h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 10px;width: 200px;">
+                            从页面、事件、路径转化等数据反馈的信息中获悉用户对产品功能和体验的反馈，是产品经理思考产品迭代优化的科学标尺。</p>
+                    </div>
+
+
+                </div>
+
+
+                <div style="margin-left: 550px;margin-top: 90px">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">产品使用流程</h3>
+
+
+                    <div>
+
+
+                        <div class="eye">
+
+                            <img src="image/reg-mtj.png" alt="">
+                            <p>注册移动统计</p>
+                        </div>
+
+                        <div class="eye">
+
+                            <img src="image/create-app.png" alt="">
+                            <p>新建APP</p>
+                        </div>
+
+                        <div class="eye">
+
+                            <img src="image/use-mtj.png" alt="">
+                            <p>嵌入SDK</p>
+                        </div>
+                        <div class="eye">
+
+                            <img src="image/embed-sdk.png" alt="">
+                            <p>查看数据，开启分析之路</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div style="margin-left: 550px;margin-top: 90px">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">产品特色</h3>
+
+                    <div style="margin-top: 20px;display: inline-block">
+
+                        <h4 style="font-size: 12px;margin-left: 5px"><span
+                                style="font-size: 14px;color: #b0b8bf;font-weight: 400;">1.</span> 永久免费，服务响应及时</h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 10px;width: 200px;">
+                            所有线上功能全部永久免费，技术支持响应及时，服务专业。</p>
+                    </div>
+
+
+                    <div style="margin-top: 20px;display: inline-block">
+
+                        <h4 style="font-size: 12px;margin-left: 5px"><span
+                                style="font-size: 14px;color: #b0b8bf;font-weight: 400;">2.</span> 接入便捷、可视化轻松埋点</h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 10px;width: 200px;">
+                            通过crash报表监测产品稳定性，帮助研发人员快速定位bug，提升修复研发效率。</p>
+                    </div>
+
+                    <div style="margin-top: 20px;display: inline-block">
+
+                        <h4 style="font-size: 12px;margin-left: 5px"><span
+                                style="font-size: 14px;color: #b0b8bf;font-weight: 400;">3.</span> 洞悉用户营销增长</h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 10px;width: 200px;">
+                            所有线上功能全部永久免费，技术支持响应及时，服务专业。</p>
+                    </div>
+
+                    <div style="margin-top: 20px;display: inline-block">
+
+                        <h4 style="font-size: 12px;margin-left: 5px"><span
+                                style="font-size: 14px;color: #b0b8bf;font-weight: 400;">4.</span> 接入便捷、可视化轻松埋点</h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 10px;width: 200px;">
+                            轻量化SDK一行代码快速接入，可视化圈选无需技术参与也可完成数据埋点，且无需发版。</p>
+                    </div>
+
+
+                </div>
+
+
+                <div style="margin-left: 550px;margin-top: 50px;  ">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">特色功能</h3>
+
+
+                    <div style="margin-top: 20px;margin-bottom: 20px;float: left">
+
+                        <h4 class="font16"><em class="emm">1</em><span style="margin-left: 15px">SEO优化必备</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 40px;width: 270px;">
+                            可视化圈选埋点也叫框架埋点，它将手机APP的界面同步至电脑端，在电脑端以点击圈选的方式完成埋点，实现采集APP相应控件点击数据的效果。该埋点方式无技术门槛，适合产品运营使用，降低研发成本的同时还提高了效率。</p>
+
+                    </div>
+                    <img src="image/products-mtj-1.png" alt="" style="width: 490px;height: 260px;margin-left: 60px">
+
+                </div>
+
+
+                <div style="margin-left: 550px;margin-top: 50px;  ">
+
+                    <div style="margin-top: 20px;margin-bottom: 20px;float: left">
+
+                        <h4 class="font16"><em class="emm">2</em><span style="margin-left: 15px">定制分析</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 40px;width: 270px;">
+                            定制分析支持用户选择任何的站内维度和指标构成自定义报表，同时将该报表固化为每日生成的常规报表，拓展报告库。它是对已有常规统计报表的补充，同时通过灵活、自由组合维度和指标，可以轻松验证各种分析思路。</p>
+
+                    </div>
+                    <img src="image/products-mtj-2.png" alt="" style="width: 490px;height: 260px;margin-left: 60px">
+
+                </div>
+
+
+                <div style="margin-left: 550px;margin-top: 50px;  ">
+
+                    <div style="margin-top: 20px;margin-bottom: 20px;float: left">
+
+                        <h4 class="font16"><em class="emm">3</em><span style="margin-left: 15px">用户群分析</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 40px;width: 270px;">
+                            用户分群是指通过多种组合纬度将用户细分为不同目标群体，并支持查看不同人群的数据表现，分析人群画像等。它在针对特定人群的特征分析、价值分析、营销管理等方面作用显著，是实现以用户为导向的精细化运营的重要功能。
+                        </p>
+                    </div>
+                    <img src="image/products-mtj-3.png" alt="" style="width: 490px;height: 260px;margin-left: 60px">
+
+                </div>
+
+
+            </li>
+            <li>
+                <!--高级分析-->
+                <div style="margin-left: 550px;margin-top: -150px">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">产品概述</h3>
+                    <p style="margin-top: 10px;color: #555966;line-height: 20px;font-size: 12px;width: 900px;">
+                        高级分析是百度统计推出面向大客户的专业数据分析产品，支持客户定制属于自己的大数据online BI分析平台。</p>
+                    <p style="margin-top: 5px;color: #555966;line-height: 20px;font-size: 12px;width: 900px;">
+                        在高级分析中，我们提供多维度交叉分析、漏斗分析、留存分析等高阶分析方法，帮助客户快速定位系统短板、获取转化及渠道成本。</p>
+                    <p style="margin-top: 5px;color: #555966;line-height: 20px;font-size: 12px;width: 900px;">
+                        同时，我们创新地引入了百度大数据用户理解，结合人群精细化分组管理，让企业真正了解自己的用户，辅助决策，提升营销效果。</p>
+                </div>
+
+                <div style="margin-left: 550px;">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;margin-top: 50px">产品优势</h3>
+
+                    <div class="circle">
+
+                        <div style="position: absolute;text-align: center;margin-top: 80px;margin-left: 80px">
+
+                            <h4 style="font-size: 24px;margin-bottom: 16px;">专业</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">数据丰富</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">功能完善</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">准确权威</p>
+                        </div>
+
+                        <div style="position: absolute;text-align: center;top: 66px;left: 290px;">
+
+                            <h4 style="font-size: 24px;margin-bottom: 16px;">稳定</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">大规模服务集群</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">分布式海量存储</p>
+                        </div>
+
+
+                        <div style="position: absolute;text-align: center;top: 118px; right: 323px;">
+
+                            <h4 style="font-size: 24px;margin-bottom: 16px;">实时</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">在线分析</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">秒级响应</p>
+                        </div>
+                        <div style="position: absolute;text-align: center;    top: 73px;right: 93px;">
+
+                            <h4 style="font-size: 24px;margin-bottom: 16px;">深入</h4>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">用户洞察</p>
+                            <p style="color: #555966; line-height: 30px;font-size: 14px">行业先知</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div style="margin-left: 550px;margin-top: 320px">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">应用场景</h3>
+
+
+                    <div>
+
+
+                        <div class="eye">
+
+                            <img src="image/ta-1.png" alt="">
+                            <p>业务监控、效果追踪</p>
+                        </div>
+
+                        <div class="eye">
+
+                            <img src="image/ta-2.png" alt="">
+                            <p>产品、流程优化</p>
+                        </div>
+
+                        <div class="eye">
+
+                            <img src="image/ta-3.png" alt="">
+                            <p>精准营销</p>
+                        </div>
+                        <div class="eye">
+
+                            <img src="image/ta-4.png" alt="">
+                            <p>搜索语义推荐</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div style="margin-left: 550px;margin-top: 50px">
+
+                    <h3 style="color: #333437;font-size: 24px;font-weight: 700;">功能详解</h3>
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">1</em><span style="margin-left: 10px">多维度即席分析</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            根据实际场景，随时在线上获取多维度交叉分析结果（60个维度、15个指标自由组合构建您的分析魔方，包含了百度搜索词等关键维度）；同时支持通过行为特征进行人群圈选，聚化分析目标，快速定位关键节点。</p>
+                    </div>
+
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">2</em><span style="margin-left: 10px">用户理解</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            产品定位及推广运营的神器，结合群圈选，随时查看客户群体的基础属性、到访意图及线上媒体分布，实时观测行业变化趋势注您锁定热定走向。</p>
+
+                    </div>
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">3</em><span style="margin-left: 10px">数据导出</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            经过ETL的大批量数据导出能够方便企业更加灵活的结合自身业务进行深入、定制化的后续分析、CRM导入等操作。</p>
+
+                    </div>
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">4</em><span style="margin-left: 10px">漏斗分析</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            支持通过页面、事件、页面标签、Trackevent多种类型结合自身业务构建关键流程漏斗，助您轻松监控多步骤过程中每步的转化及流失情况；自由圈选每步流失人群进行更细致的分析及人群定位，也可以进行流失人群导出在百度推广渠道进行再投放，助力精准营销。</p>
+
+                    </div>
+
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">5</em><span style="margin-left: 10px">留存分析</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            通过对目标人群黏性及活跃度的监控与分析，结合业务不断调整寻找产品的magic number，更有针对性的调整推广/产品策略。
+                        </p>
+
+                    </div>
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">6</em><span style="margin-left: 10px">自定义标签</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            我们提供了丰富的api埋点功能，支持客户针对业务进行量身打造的数据统计服务。包括了用于内容分析的页面标签，用于行为分析的访问标签，以及用于用户分析的访客标签。
+                        </p>
+
+                    </div>
+
+
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">7</em><span style="margin-left: 10px">再营销</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            再营销指通过圈选出网站中潜在的种子用户群，为其投放量身定制的推广信息，是一种非常有效的促进客户转化的方法。
+                        </p>
+
+                    </div>
+                    <div style="margin-top: 10px;margin-bottom: 20px">
+                        <h4 class="font16"><em class="emm">7</em><span style="margin-left: 10px">用户洞察</span></h4>
+                        <p style="color: #555966; line-height: 30px;font-size: 12px;padding-left: 30px">
+                            结合人群圈选，了解目标用户真实行为轨迹，全方位帮助企业诊察问题，以数据而非直觉驱动决策。
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+                <div style="height: 300px;background: #e5e5e5"></div>
+
+
+            </li>
+            <li>
+
+                <div style="margin-left: 550px;margin-top: -200px">
+                    <div class="doole">我们的Doodle</div>
+
+
+                    <div style="text-align: center;display:inline-block;">
+
+                        <div style="padding-top: 1.6rem; font-size: 1.6rem;color: #e10602;">512汶川地震</div>
+                        <div style="line-height: 2rem; font-size: 1rem;color: #999999;">2018-05-12</div>
+                        <div><img src="image/jieri01.png" alt="" style="width: 400px;height: 200px;"></div>
+                    </div>
+                    <div style="text-align: center;display: inline-block;">
+
+                        <div style="padding-top: 1.6rem; font-size: 1.6rem;color: #e10602;">世界地球日</div>
+                        <div style="line-height: 2rem; font-size: 1rem;color: #999999;">2018-04-22</div>
+                        <div><img src="image/jieri.gif" alt="" style="width: 400px;height: 200px;"></div>
+                    </div>
+                    <div style="text-align: center;display: inline-block;">
+
+                        <div style="padding-top: 1.6rem; font-size: 1.6rem;color: #e10602;">清明节</div>
+                        <div style="line-height: 2rem; font-size: 1rem;color: #999999;">2018-04-05</div>
+                        <div><img src="image/jieri03.gif" alt="" style="width: 400px;height: 200px;"></div>
+                    </div>
+
+                    <div class="dooles"><a href="" style="    background-color: #2472dc; color: #ffffff;">查看更多</a></div>
+                </div>
+
+
+                <div style="margin-left: 550px">
+                <div class="doole">百度公司介绍</div>
+
+                    <div class="imgine">
+                        <img src="image/jiazhi.jpg" alt="">
+                        <div class="hexin">我们的核心价值观</div>
+                    </div>
+
+<!--
+
+                    <div class="bd-desc-content">
+                        <p style="text-align: center;">简单可依赖</p>
+                        <a href="" class="mores">了解更多</a>
+                    </div>
+-->
+
+
+
+
+
+                    <div class="imgine" style="margin-left: 500px">
+                        <img src="image/gongsi.jpg" alt="">
+                        <div class="hexin">我们的公司</div>
+                    </div>
+
+
+
+                    <div class="imgine" style="margin-left: 1000px">
+                        <img src="image/baiduzhilu.jpg" alt="">
+                        <div class="hexin">百度之路</div>
+                    </div>
+
+
+
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+
+
+</div>
+</body>
+</html>
